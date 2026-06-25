@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Maze Solver Visualizer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>
+
+        🧩 Maze Solver Visualizer
+
+    </h1>
+
+    <p>
+
+        Solve mazes using BFS, DFS and A* Search
+
+    </p>
+
+    <div class="controls">
+
+        <div class="card">
+
+            <label>
+
+                Choose Maze
+
+            </label>
+
+            <select id="mazeSelect">
+
+                <option>Simple Maze</option>
+
+                <option>Medium Maze</option>
+
+                <option>Hard Maze</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="card">
+
+            <label>
+
+                Algorithm
+
+            </label>
+
+            <select id="algorithm">
+
+                <option>BFS</option>
+
+                <option>DFS</option>
+
+                <option>A*</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="card">
+
+            <label>
+
+                Animation Speed
+
+            </label>
+
+            <select id="speed">
+
+                <option>Slow</option>
+
+                <option selected>Medium</option>
+
+                <option>Fast</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button>
+
+            🎲 Generate Random Maze
+
+        </button>
+
+        <button>
+
+            🚀 Solve Maze
+
+        </button>
+
+        <button>
+
+            📊 Compare Algorithms
+
+        </button>
+
+    </div>
+
+
+    <div class="maze-area">
+
+        <canvas
+                id="mazeCanvas"
+                width="700"
+                height="500">
+        </canvas>
+
+    </div>
+
+
+    <div class="stats">
+
+        <div>
+
+            <h3>
+
+                Visited Nodes
+
+            </h3>
+
+            <span id="visited">
+
+                -
+
+            </span>
+
+        </div>
+
+        <div>
+
+            <h3>
+
+                Path Length
+
+            </h3>
+
+            <span id="path">
+
+                -
+
+            </span>
+
+        </div>
+
+        <div>
+
+            <h3>
+
+                Execution Time
+
+            </h3>
+
+            <span id="time">
+
+                -
+
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
